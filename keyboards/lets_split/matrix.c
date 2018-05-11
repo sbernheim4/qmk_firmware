@@ -46,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     static bool debouncing = false;
 #endif
 
-#if (MATRIX_COLS <= 8)
+#if (MATRIX_COLS <= 9)
 #    define print_matrix_header()  print("\nr/c 01234567\n")
 #    define print_matrix_row(row)  print_bin_reverse8(matrix_get_row(row))
 #    define matrix_bitpop(i)       bitpop(matrix[i])
