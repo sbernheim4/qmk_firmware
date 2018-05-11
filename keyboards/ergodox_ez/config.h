@@ -30,9 +30,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DESCRIPTION     QMK keyboard firmware for Ergodox EZ
 
 /* key matrix size */
-#define MATRIX_ROWS 14
+#define MATRIX_ROWS 10
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
-#define MATRIX_COLS 6
+#define MATRIX_COLS 9
 
 #define MOUSEKEY_INTERVAL       20
 #define MOUSEKEY_DELAY          0

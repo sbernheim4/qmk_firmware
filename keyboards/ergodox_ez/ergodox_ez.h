@@ -106,45 +106,45 @@ inline void ergodox_led_all_set(uint8_t n)
     ergodox_right_led_3_set(n);
 }
 
-#define KEYMAP(                                                 \
-                                                                \
-    /* left hand, spatial positions */                          \
-    k00,k01,k02,k03,k04,k05,k06,                                \
-    k10,k11,k12,k13,k14,k15,k16,                                \
-    k20,k21,k22,k23,k24,k25,                                    \
-    k30,k31,k32,k33,k34,k35,k36,                                \
-    k40,k41,k42,k43,k44,                                        \
-                            k55,k56,                            \
-                                k54,                            \
-                        k53,k52,k51,                            \
-                                                                \
-    /* right hand, spatial positions */                         \
-        k07,k08,k09,k0A,k0B,k0C,k0D,                            \
-        k17,k18,k19,k1A,k1B,k1C,k1D,                            \
-            k28,k29,k2A,k2B,k2C,k2D,                            \
-        k37,k38,k39,k3A,k3B,k3C,k3D,                            \
-                k49,k4A,k4B,k4C,k4D,                            \
-    k57,k58,                                                    \
-    k59,                                                        \
-    k5C,k5B,k5A )                                               \
-                                                                \
-   /* matrix positions */                                       \
-   {                                                            \
-    { k00, k10, k20, k30, k40, KC_NO },   \
-    { k01, k11, k21, k31, k41, k51 },   \
-    { k02, k12, k22, k32, k42, k52 },   \
-    { k03, k13, k23, k33, k43, k53 },   \
-    { k04, k14, k24, k34, k44, k54 },   \
-    { k05, k15, k25, k35, KC_NO, k55 },   \
-    { k06, k16, KC_NO, k36, KC_NO, k56 },   \
-                                                                 \
-    { k07, k17, KC_NO, k37,KC_NO, k57 },   \
-    { k08, k18, k28, k38,KC_NO, k58 },   \
-    { k09, k19, k29, k39, k49, k59 },   \
-    { k0A, k1A, k2A, k3A, k4A, k5A },   \
-    { k0B, k1B, k2B, k3B, k4B, k5B },   \
-    { k0C, k1C, k2C, k3C, k4C, k5C },   \
-    { k0D, k1D, k2D, k3D, k4D, KC_NO }    \
+#define KEYMAP(                                                                  \
+                                                                                 \
+    /* left hand, spatial positions */                                           \
+      k00,    k01,   k02,   k03,   k04,   k05,   k06,      k07,    k08,                                         \
+      k10,    k11,   k12,   k13,   k14,   k15,   k16,      k17,    k18,                                         \
+      k20,    k21,   k22,   k23,   k24,   k25,   k26,      k27,    k28,                                         \
+      k30,    k31,   k32,   k33,   k34,   k35,   k36,      k37,    k38,                                         \
+      k40,    k41,   k42,   k43,   k44,   k45,   k46,      k47,    k48,                                         \
+                                                                                 \
+    /* right hand, spatial positions */                                          \
+      k09,    k0A,   k0B,   k0C,   k0D,   k0E,   k0F,      k0G,    k0H,                                         \
+      k19,    k1A,   k1B,   k1C,   k1D,   k1E,   k1F,      k1G,    k1H,                                         \
+      k29,    k2A,   k2B,   k2C,   k2D,   k2E,   k2F,      k2G,    k2H,                                         \
+      k39,    k3A,   k3B,   k3C,   k3D,   k3E,   k3F,      k3G,    k3H,                                         \
+      k49,    k4A,   k4B,   k4C,   k4D,   k4E,   k4F,      k4G,    k4H                                          \
+                                                                                 \
+    )                                                                            \
+                                                                                 \
+   /* matrix positions */                                                        \
+   {                                                                             \
+    { k00,    k10,   k20,    k30,   k40},      \
+    { k01,    k11,   k21,    k31,   k41},      \
+    { k02,    k12,   k22,    k32,   k42},      \
+    { k03,    k13,   k23,    k33,   k43},      \
+    { k05,    k15,   k25,    k35,   k45},      \
+    { k04,    k14,   k24,    k34,   k44},      \
+    { k06,    k16,   k26,    k36,   k46},      \
+    { k07,    k17,   k27,    k37,   k47},      \
+    { k08,    k18,   k28,    k38,   k48},      \
+                                               \
+    { k09,    k19,   k29,    k39,   k49},      \
+    { k0A,    k1A,   k2A,    k3A,   k4A},      \
+    { k0B,    k1B,   k2B,    k3B,   k4B},      \
+    { k0C,    k1C,   k2C,    k3C,   k4C},      \
+    { k0D,    k1D,   k2D,    k3D,   k4D},      \
+    { k0E,    k1E,   k2E,    k3E,   k4E},      \
+    { k0F,    k1F,   k2F,    k3F,   k4F},      \
+    { k0G,    k1G,   k2G,    k3G,   k4G},      \
+    { k0H,    k1H,   k2H,    k3H,   k4H}       \
    }
 
 #define KEYMAP_80(                                              \
@@ -171,12 +171,12 @@ inline void ergodox_led_all_set(uint8_t n)
                                                                 \
    /* matrix positions */                                       \
    {                                                            \
-    { k00, k10, k20, k30, k40, KC_NO },   \
-    { k01, k11, k21, k31, k41, k51 },   \
-    { k02, k12, k22, k32, k42, k52 },   \
-    { k03, k13, k23, k33, k43, k53 },   \
-    { k04, k14, k24, k34, k44, k54 },   \
-    { k05, k15, k25, k35, k45, k55 },   \
+    { k00, k10, k20,   k30  k40, KC_NO },   \
+    { k01, k11, k21,   k31  k41, k51 },   \
+    { k02, k12, k22,   k32  k42, k52 },   \
+    { k03, k13, k23,   k33  k43, k53 },   \
+    { k04, k14, k24,   k34  k44, k54 },   \
+    { k05, k15, k25,   k35  k45, k55 },   \
     { k06, k16, KC_NO, k36, k46, k56 },   \
                                                                  \
     { k07, k17, KC_NO, k37, k47, k57 },   \
